@@ -20,3 +20,24 @@ SELECT *
 FROM employees
 WHERE last_name LIKE '%q%';
 
+# ------------------------------------------------------------
+
+SELECT * FROM employees
+WHERE (first_name = 'Irena' OR
+      first_name = 'Vidya' OR
+      first_name = 'Maya')
+AND gender = 'M';
+
+SELECT *
+FROM employees
+WHERE last_name LIKE 'e%e';
+
+SELECT *
+FROM employees
+WHERE birth_date LIKE '%12-25'
+AND hire_date LIKE '199%';
+
+SELECT *
+FROM employees
+WHERE last_name LIKE '%q%' AND last_name
+NOT LIKE '%qu%';
